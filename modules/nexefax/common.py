@@ -90,7 +90,7 @@ def get_config_defaults():
         "server": {
             "bind": "0.0.0.0",
             "port_fagi": "4573",
-            "port_http": "39280",
+            "port_http": "3298",
             "web_session_length": "86400",
         },
         "email": {
