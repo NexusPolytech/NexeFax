@@ -184,13 +184,13 @@ The following options can be configured for each account in accounts.conf and ef
 | tx_channel | Override the TX channel for this account. | | | |
 
 The following options can be configured to provide information for the sending entity. They are not used yet but will be used in future versions.
-| Option | Purpose | Required | Options | Default |
-| -------- | ------ | ------- | -------- | ------- |
-| info_name | Information about the sending entity: Name | |  | |
-| info_fax | Information about the sending entity: Fax Number | No |  | |
-| info_phone | Information about the sending entity: Phone | No |  | |
-| info_email | Information about the sending entity: Email Address | No |  | |
-| info_web | Information about the sending entity: Website | No |  | |
+| Option | Purpose |
+| -------- | ------ |
+| info_name | Information about the sending entity: Name |
+| info_fax | Information about the sending entity: Fax Number | 
+| info_phone | Information about the sending entity: Phone | 
+| info_email | Information about the sending entity: Email Address | 
+| info_web | Information about the sending entity: Website | 
 
 
 
