@@ -19,7 +19,7 @@ Some of the key features of NexeFax include:
 * Web UI interface to easily send faxes
 * Each Fax Account can have multiple users for web UI access
 * Inbuilt FastAGI server for Asterisk
-* Very low memory footprint (<15Mb)
+* Very low memory footprint (~30Mb)
 
 ### Screenshots
 **Login**
