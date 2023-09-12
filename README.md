@@ -103,7 +103,7 @@ A sample server configuration file for Nginx is included in the /usr/lib/nexefax
 
 
 ## Configuring NexeFax
-NexeFax is configured with three types of files stored in /etx/nexefax:
+NexeFax is configured with three types of files stored in /etc/nexefax:
 
 1. **config.conf**: This is the main configuration files that controls NexeFax.
    
@@ -196,11 +196,14 @@ The following options can be configured to provide information for the sending e
 
 __Auth Files__
 
-Auth files htpasswd files which are stored inside /etx/nexefax/auth. They are used to allow access to the web UI.
+Auth files are htpasswd files which are stored inside /etc/nexefax/auth. They are used to allow access to the web UI by the HTTP server.
 
 You must setup an auth file for each account you have created in accounts.conf.
 
 In the below example we will be creating a user named **bob.smith** within the ACME account auth file.
+
+**NOTE**: You must ensure that bcrypt is used by passing the -B argument to htpasswd.
+
 ```
 htpasswd -B -c /etc/nexefax/auth/ACME bob.smith
 
