@@ -71,9 +71,8 @@ def get_config_defaults():
             "ast_call_dir": "/var/spool/asterisk/outgoing",
             "tmp_dir": "/tmp/nexefax",
             "ast_context": "nexefax",
-            "tx_timeout": "45",
             "tx_max_retries": "5",
-            "tx_retry_time": "60",
+            "tx_retry_time": "300",
             "tx_wait_time": "30",
             "tx_faxopt_ecm": "yes",
             "tx_faxopt_modem": "v17,v27,v29",
@@ -174,7 +173,7 @@ def get_accounts():
     accounts["DEFAULT"] = get_account_defaults()
     accounts.read(accounts_file)
     account_ids = accounts.sections()
-    required_settings = ["rx_email_to"]
+    required_settings = ["rx_email_to", "tx_number", "tx_name"]
     for account_id in account_ids:
         new_account_id = account_id.lower()
         section_data = accounts[account_id]
