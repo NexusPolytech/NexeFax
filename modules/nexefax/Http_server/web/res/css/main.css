@@ -1,0 +1,330 @@
+/*
+/////////////////////////////////////////////////////////////////////////////
+// Copyright (C) 2023, Nexus Polytech Pty Limited. Some rights reserved.
+//
+// nexuspoly.tech | contact@nexuspoly.tech | GPO Box 1231, SYDNEY NSW 2001
+//
+// Codebase: NexeFax
+//
+// License: BSD 3-Clause License
+//
+// See LICENSE file for more details.
+/////////////////////////////////////////////////////////////////////////////
+*/
+
+body{
+    background: #ffffff;
+    color: #424247;
+    font-family: sans-serif;
+    font-size: 14pt;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+main{
+	width: 100%;
+}
+
+.container{
+    height: auto;
+    min-height: 450px;
+    width: 350px;
+    transition: .2s;
+    overflow: hidden;
+    padding: 20px 40px;
+    background: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    display: block;
+    flex-shrink: 0;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+.container.big{
+    width: 80%;
+    max-width: 900px;
+    min-height: 700px;
+
+}
+
+.container h1{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: #484848;
+}
+
+
+#login .logocontainer{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+#login .logocontainer img{
+    width: 70%;
+}
+
+#login h1{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+#login button{
+    float: right;
+}
+
+#menu{
+    width: 100%;
+    display: block;
+    background: white;
+    text-align: center;
+    padding: 10px 0px;
+    color: #666;
+    border-bottom: 2px solid #dadce0;
+    position: fixed;
+    height: 33px;
+}
+
+#menu .logocontainer{
+    width: fit-content;
+    padding-left: 15px;
+}
+
+#menu .logocontainer img{
+    height: 100%;
+}
+
+#compose form, #compose embed{
+    width: 49.5%;
+    float: left;
+}
+
+#compose embed{
+    height: 650px;
+    background: rgb(230, 230, 230);
+    border: 1px outset rgb(196, 196, 196);
+    border-radius: 5px;
+    float: right;
+}
+
+#loading{
+    width: 100%;
+    height: 100%;
+    background: rgb(237 237 237);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999;
+    cursor: wait;
+}
+
+#loading h2{
+    font-size: 2em;
+    font-weight: bold;
+    z-index: 100;
+}
+
+#loading img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.75;
+    z-index: 90;
+}
+
+#logout{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.title{
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+.icon{
+    width: 100%;
+    height: 100%;
+}
+
+.smalltext{
+    font-size: 75% !important;
+}
+
+.error-msg{
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: rgb(217,48,37);
+    font-family: sans-serif;
+    clear: both;
+    padding-top: 15px;
+}
+
+.error-msg::before{
+    content: "!";
+    height: 1em;
+    color: white;
+    background: rgb(217,48,37);
+    font-weight: bold;
+    border-radius: 100%;
+    display: inline-block;
+    width: 1.1em;
+    margin-right: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+button{
+    font-size: 1em;
+    padding: 7px 21px;
+    color: white;
+    border-radius: 4px;
+    float: right;
+    margin-left: 10px;
+    background: black;
+}
+
+input, select, textarea{
+    width: 100%;
+    min-height: 3em;
+    border-style: solid;
+    border-color: #e6e6e6;
+    border-width: 1px;
+    border-radius: 7px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: none !important;
+    font-family: sans-serif;
+    font-size: 0.8em;
+}
+
+input:active, input:focus, input:focus-visible,
+textarea:active, textarea:focus, textarea:focus-visible{
+    border-color: #2494fe !important;
+    border-width: 1px !important;
+}
+
+p.red, span.red{
+    color: #b50202;
+}
+
+button.red, a.red{
+    background: #b50202;
+    border: 1px solid #a40000;
+}
+
+button.red:hover, a.red:hover{
+    background: #a40000;
+}
+
+button.red:active, a.red:active{
+    background: #8f0000;
+}
+
+button.green, a.green{
+    background: #4e9a06;
+    border: 1px solid #377200;
+}
+
+button.green:hover, a.green:hover{
+    background: #377200;
+}
+
+button.green:active, a.green:active{
+    background: #285200;
+}
+
+button.blue, a.blue{
+    background: #2494fe;
+    border: 1px solid #055fb5;
+}
+
+button.blue:hover, a.blue:hover{
+    background: #1578d6;
+    cursor: pointer !important;
+}
+
+button.blue:active, a.blue:active{
+    background: #055fb5;
+    cursor: pointer !important;
+}
+
+
+button.orange, a.blue{
+    background: #F6772F;
+    border: 1px solid #c75614;
+}
+
+button.orange:hover, a.orange:hover{
+    background: #fc8743;
+    cursor: pointer !important;
+}
+
+button.orange:active, a.orange:active{
+    background: #c75614;
+    cursor: pointer !important;
+}
+
+#loginbg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1000;
+}
+
+#loginbg video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    object-fit: cover;
+}
+
+
+@media only screen and (max-width: 600px) {    
+    .container{
+        max-width: 280px !important;
+    }
+
+    #login.container{
+        background: #ffffffeb !important;
+    }
+    
+    #compose embed{
+        display: none;
+    }
+
+    #compose form{
+        width: 100%;
+    }
+
+    .container.big{
+        margin-top: 4em;
+        margin-bottom: 1em;
+    }
+}

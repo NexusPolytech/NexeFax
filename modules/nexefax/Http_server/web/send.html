@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Send - NexeFax</title>
+    <link href="res/css/main.css" type="text/css" media="screen" rel="stylesheet">
+    <link href="res/css/toast.css" type="text/css" media="screen" rel="stylesheet">
+    <link href="res/img/icon.png" type="image/png" rel="icon">
+    <style>.hidden {display: none !important;}</style>
+    <script src="res/js/main.js"></script>
+</head>
+<body onload="window.nexefax.web.prepare();">
+    <nav id="menu" class="">
+        <div class="logocontainer">
+            <img src="res/img/logoh.png" alt="NexeFax">
+        </div>
+        <button id="logout" onclick="nexefax.web.logout();" class="red">Logout</button>
+    </nav>
+    <main>
+        <section id="compose" class="container big">
+            <h1>Send a new Fax</h1>
+            <form onsubmit="nexefax.web.send(); return false;" action="#" method="post" >
+                <label for="send-from">From</label>
+                <input id="send-from" name="from" type="text" placeholder="From" readonly>
+                <label for="send-to">To</label>
+                <input id="send-to" name="fax_to" type="text" placeholder="To">
+                <label for="send-subject">Subject</label>
+                <input id="send-subject" name="subject" type="text" placeholder="Subject">
+                <label for="send-message">Message</label>
+                <textarea id="send-message" name="message" placeholder="Message" rows="8"></textarea>
+                <label for="send-faxfile">Fax Document (as a PDF)</label>
+                <input id="send-faxfile" name="fax_file" type="file" accept=".pdf" onchange="nexefax.web.preview_pdf();">
+                <button class="orange" type="submit">Send Fax</button>
+                <button class="blue" type="button" onclick="nexefax.web.reset_compose();">Reset</button>
+            </form>
+            <embed id="send-preview" src=""/>
+        </section>
+        <section id="loading" class="">
+            <img src="res/img/loading.svg" alt="Loading">
+            <h2>Loading</h2>
+            <p>Please wait...</p>
+          </section>
+    </main>
+</body>
+</html>

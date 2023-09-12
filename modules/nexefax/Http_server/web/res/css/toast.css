@@ -1,0 +1,110 @@
+/*
+/////////////////////////////////////////////////////////////////////////////
+// Copyright (C) 2023, Nexus Polytech Pty Limited. Some rights reserved.
+//
+// nexuspoly.tech | contact@nexuspoly.tech | GPO Box 1231, SYDNEY NSW 2001
+//
+// Codebase: NexeFax
+//
+// License: BSD 3-Clause License
+//
+// See LICENSE file for more details.
+/////////////////////////////////////////////////////////////////////////////
+*/
+/* Code based off 'Pure CSS/JS Toast Notification' (https://codepen.io/kipp0/pen/pPNrrj) by Pierre Smith (https://codepen.io/kipp0) */
+
+.toast {
+    visibility: hidden;
+    max-width: 50px;
+    min-width: 50px;
+    height: 50px;
+    /*margin-left: -125px;*/
+    margin: auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right:0;
+    bottom: 30px;
+    font-size: 13px;
+    white-space: nowrap;
+    border-radius: 15px 15px 15px 0;
+    box-shadow: 5px 2px 15px 0px #00000061;
+    overflow: hidden;
+}
+
+.toast .symbol, .toast .desc{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.toast .symbol{
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-color: #2494fe;
+    color: #fff;
+    font-size: 2.2em;
+    border-radius: 15px 15px 15px 0;
+}
+
+.toast.error .symbol{
+    background-color: #d93025;
+}
+
+.toast.warning .symbol{
+    background-color: #F6772F;
+}
+
+.toast.alert .symbol{
+    background-color: #2494fe;
+}
+
+.toast.success .symbol{
+    background-color: #3fb11d;
+}
+
+.toast .desc{
+    color: #fff;
+    padding: 10px;
+    white-space: nowrap;
+    height: calc(100% - 20px);
+    word-wrap: break-word;
+    width: auto;
+    font-size: 12pt;
+    text-wrap: wrap;
+    overflow: hidden;
+}
+
+.toast.show {
+    visibility: visible;
+    animation: fadein 0.25s, expand 0.25s 0.25s, stay 5s 0.5s, shrink 0.25s 5.5s, fadeout 0.25s 5.75s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes expand {
+    from {max-width: 50px}
+    to {max-width: 500px}
+}
+
+@keyframes stay {
+    from {max-width: 500px}
+    to {max-width: 500px}
+}
+@keyframes shrink {
+    from {max-width: 500px;} 
+    to {max-width: 50px;}
+}
+
+@keyframes fadeout {
+    from {opacity: 1; max-width: 50px;}
+    to {opacity: 0; max-width: 50px}
+}

@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login - NexeFax</title>
+    <link href="res/css/main.css" type="text/css" media="screen" rel="stylesheet">
+    <link href="res/css/toast.css" type="text/css" media="screen" rel="stylesheet">
+    <link href="res/img/icon.png" type="image/png" rel="icon">
+    <style>.hidden {display: none !important;}</style>
+    <script src="res/js/main.js"></script>
+</head>
+<body>
+    <div id="loginbg">
+        <video autoplay="true" muted="muted" loop="false" width="1920" height="1280">
+            <source type="video/mp4" src="/res/vid/loginbg.mp4"> 
+            <img src="/res/img/loginbg.jpg" width="100%" height="100%">
+        </video>    
+    </div>
+    <main>
+        <section id="login" class="container">
+            <div class="logocontainer">
+                <img src="res/img/logoh.png" alt="NexeFax">
+            </div>
+            <h1>Sign in</h1>
+            <p class="title">Login and start faxing like they couldn't even dream of in the 90's.</p>
+            <form data-name="form" onsubmit="nexefax.web.login(); return false;" action="#" method="post" >
+                <input id="login-account" name="account" type="text" placeholder="Account">
+                <input id="login-user" name="user" type="text" placeholder="Username">
+                <input id="login-password" name="password" type="password" placeholder="Password">
+                <button class="blue" type="submit">Next</button>
+                <span class="error hidden" data-name="error"></span>
+            </form>
+        </section>
+        <section id="loading" class="hidden">
+            <img src="res/img/loading.svg" alt="Loading">
+            <h2>Loading</h2>
+            <p>Please wait...</p>
+          </section>
+    </main>
+</body>
+</html>
