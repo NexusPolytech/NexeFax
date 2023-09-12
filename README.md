@@ -57,7 +57,10 @@ Note that this does not deal with the installation of Asterisk or res_fax. These
 ## Installing NexeFax Server
 Extract the NexeFax server files to /usr/lib/nexefax.
 ```
-TODO
+cd /tmp
+wget https://github.com/NexusPolytech/NexeFax/archive/refs/tags/v0.0.1.tar.gz
+tar -xf v0.0.1.tar.gz
+cp -r /tmp/NexeFax-0.0.1/ /usr/lib/nexefax
 ```
 
 ## Integration with Asterisk Dialplan
