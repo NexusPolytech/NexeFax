@@ -21,8 +21,14 @@ Some of the key features of NexeFax include:
 * Inbuilt FastAGI server for Asterisk
 * Very low memory footprint (<15Mb)
 
-<img src="https://github.com/NexusPolytech/NexeFax/assets/1935851/eb40bd38-fa1b-49f6-8c98-b229c4c837fc" width="350px">
-<img src="https://github.com/NexusPolytech/NexeFax/assets/1935851/1bf7d3c1-ad2e-46cb-8f18-f4df7b1a0ef7" width="350px">
+### Screenshots
+**Login**
+
+<img src="https://github.com/NexusPolytech/NexeFax/assets/1935851/821a2b81-89b6-48f9-96e6-e6a9ed2f4639" width="500px">
+
+**Compose**
+
+<img src="https://github.com/NexusPolytech/NexeFax/assets/1935851/3e1bde62-85f0-4477-837d-e9f72b119a7c" width="500px">
 
 ## How it works
 NexeFax has 3 main components, it's inbuilt FastAGI server which receives events from Asterisk (such as when a Fax is received or after one is sent), it's inbuilt HTTP server which enables a web UI for users to send faxes, and it's inbuilt eFax server which handles the processing of PDF and TIFF files.
