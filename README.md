@@ -56,7 +56,7 @@ NexeFax depends on the following:
 
 On a Debian/Ubuntu based Linux system run the following:
 ```
-apt-get install python3 python3-bcrypt imagemagick ghostscript
+apt-get install python3 python3-bcrypt imagemagick ghostscript apache2-utils
 ```
 Note that this does not deal with the installation of Asterisk or res_fax. These must be installed separately.
 
