@@ -16,6 +16,7 @@
 import signal
 import logging
 import time
+import gc
 import modules.nexefax.common as common
 import modules.nexefax.rx as rx
 import modules.nexefax.tx as tx
@@ -83,6 +84,7 @@ class Efax_server:
         quit()
 
     def maintain(self):
+        gc.collect()
         if self.http_srv.bg_thread.is_alive():
             self.http_srv.session_maintain()
         else:
