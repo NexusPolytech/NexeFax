@@ -1,0 +1,29 @@
+[Unit]
+Description=NexeFax - An open source eFax server solution for sending and receiving faxes
+Documentation=https://github.com/NexusPolytech/nexefax
+Requires=network-online.target
+After=network-online.target
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+User=root
+ExecStart=/usr/bin/env python3 /usr/lib/nexefax/server.py
+Restart=on-failure
+RestartSec=5
+KillMode=process
+TimeoutStopSec=30
+StartLimitBurst=3
+ProtectSystem=full
+ProtectHome=read-only
+PrivateDevices=true
+PrivateTmp=no
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+NoNewPrivileges=true
+StandardOutput=append:/var/log/nexefax/system.log
+StandardError=append:/var/log/nexefax/error.log
+
+[Install]
+WantedBy=multi-user.target
